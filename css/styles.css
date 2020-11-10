@@ -1,4 +1,147 @@
-*{
+@import url(normalize.css);
+
+/*Fuentes
+font-family: 'Poppins', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+#page{
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px;
+
+    display: grid;
+    grid-gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "header			header   	header"
+      "principal        principal   principal"
+      "section          section     section"
+      "aside            aside       aside"
+      "footer	 		footer 		footer";
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+    align-items: center;
     text-align: center;
     padding: 20px;
+}
+
+header nav{
+    padding-right: 20px;
+    justify-content: space-between
+}
+
+header nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px;
+    margin-bottom: 0px;
+}
+header nav ul li a{
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s ease all;
+    margin: auto;
+}
+
+header nav ul li a:hover {
+    background: #000;
+    color: #fff;
+}
+
+main{
+    grid-area: principal;
+    background: url("../img/fondo_main.jpg");
+    background-repeat: no-repeat;
+    background-size: 2500px;
+
+    display: grid;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: justify;
+    color: aliceblue;
+    align-items: center;
+    grid-template-columns: 1fr 1.3fr 0.7fr;
+}
+
+main img{
+    padding-left: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+main div{
+    padding-left: 50%;
+}
+
+section{
+    background-color: rgb(228, 253, 253);
+    grid-area: section;
+    display: grid;
+    padding: 20px;
+}
+
+article{
+    background-color: rgb(228, 253, 253);
+    grid-area: aside;
+    display: grid;
+    border-radius: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.25rem;
+    padding: 30px;
+}
+
+article .capsulas{
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+article a{
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s ease all;
+    margin: auto;
+}
+
+article a:hover {
+    background: #000;
+    color: #fff;
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(66, 63, 63);
+    background-size: auto;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
 }
